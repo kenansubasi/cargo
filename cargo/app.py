@@ -22,8 +22,10 @@ def cityList():
     data = []
     for city in cities:
         item = {
-            'id': str(city['_id']),
-            'name': str(city['name'])
+            "id": str(city["_id"]),
+            "name": city["name"],
+            "shipment_companies": city["shipment_companies"]
+
         }
         data.append(item)
 

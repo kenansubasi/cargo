@@ -13,4 +13,4 @@ __pycache__/
 *.so
 
 # Project
-data/
+dbdata/

@@ -1,5 +1,10 @@
 import os
 
+# Base
+FLASK_ENV = os.environ.get("FLASK_ENV", "development")
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+FIXTURE_DIR = os.path.join(BASE_DIR, "fixtures", "data")
+
 # Database
 MONGODB_HOSTNAME=os.environ["MONGODB_HOSTNAME"]
 MONGODB_PORT=os.environ["MONGODB_PORT"]
