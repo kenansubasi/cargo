@@ -1,0 +1,110 @@
+[
+    {
+        "_id": "5ea30079b523e10023717732",
+        "city": "A",
+        "shipment_company": "X",
+        "price": 10
+    },
+    {
+        "_id": "5ea30079b523e10023717733",
+        "city": "A",
+        "shipment_company": "Y",
+        "price": 20
+    },
+    {
+        "_id": "5ea30079b523e10023717734",
+        "city": "A",
+        "shipment_company": "Z",
+        "price": 15
+    },
+    {
+        "_id": "5ea30079b523e10023717735",
+        "city": "B",
+        "shipment_company": "X",
+        "price": 8
+    },
+    {
+        "_id": "5ea30079b523e10023717736",
+        "city": "B",
+        "shipment_company": "Y",
+        "price": 14
+    },
+    {
+        "_id": "5ea30079b523e10023717737",
+        "city": "B",
+        "shipment_company": "Z",
+        "price": 22
+    },
+    {
+        "_id": "5ea30079b523e10023717738",
+        "city": "C",
+        "shipment_company": "X",
+        "price": 30
+    },
+    {
+        "_id": "5ea30079b523e10023717739",
+        "city": "C",
+        "shipment_company": "Y",
+        "price": 25
+    },
+    {
+        "_id": "5ea30079b523e10023717740",
+        "city": "C",
+        "shipment_company": "Z",
+        "price": 20
+    },
+    {
+        "_id": "5ea30079b523e10023717741",
+        "city": "D",
+        "shipment_company": "X",
+        "price": 44
+    },
+    {
+        "_id": "5ea30079b523e10023717742",
+        "city": "D",
+        "shipment_company": "Y",
+        "price": 16
+    },
+    {
+        "_id": "5ea30079b523e10023717743",
+        "city": "D",
+        "shipment_company": "Z",
+        "price": 28
+    },
+    {
+        "_id": "5ea30079b523e10023717744",
+        "city": "E",
+        "shipment_company": "X",
+        "price": 15
+    },
+    {
+        "_id": "5ea30079b523e10023717745",
+        "city": "E",
+        "shipment_company": "Y",
+        "price": 25
+    },
+    {
+        "_id": "5ea30079b523e10023717746",
+        "city": "E",
+        "shipment_company": "Z",
+        "price": 35
+    },
+    {
+        "_id": "5ea30079b523e10023717747",
+        "city": "F",
+        "shipment_company": "X",
+        "price": 9
+    },
+    {
+        "_id": "5ea30079b523e10023717748",
+        "city": "F",
+        "shipment_company": "Y",
+        "price": 29
+    },
+    {
+        "_id": "5ea30079b523e10023717749",
+        "city": "F",
+        "shipment_company": "Z",
+        "price": 19
+    }
+]

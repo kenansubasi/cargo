@@ -1,5 +1,6 @@
-from flask import Flask, make_response, jsonify
+from flask import Flask, request, make_response, jsonify
 from flask_pymongo import PyMongo
+from pymongo import ASCENDING
 
 from .constants import MONGODB_DATABASE, MONGO_URI
 
@@ -12,21 +13,35 @@ mongo = PyMongo(app)
 
 @app.route('/')
 def index():
-    return make_response(jsonify(message='Welcome to the Dockerized Flask MongoDB app!'), 200)
-
-
-@app.route('/cities/')
-def cityList():
-    cities = mongo.db.cities.find()
-
-    data = []
-    for city in cities:
-        item = {
-            "id": str(city["_id"]),
-            "name": city["name"],
-            "shipment_companies": city["shipment_companies"]
-
-        }
-        data.append(item)
+    data = {
+        "Cargo Info": f"{request.url}info/",
+        "Cargo Result": f"{request.url}result/"
+    }
 
     return make_response(jsonify(data), 200)
+
+
+@app.route("/info/")
+def cargo_info():
+    cargo_info = mongo.db.cargo.find()
+
+    data = []
+    for item in cargo_info:
+        data.append({
+            "city": item["city"],
+            "shipment_company": item["shipment_company"],
+            "price": item["price"]
+        })
+
+    return make_response(jsonify(data), 200)
+
+
+@app.route("/result/")
+def cargo_result():
+    from .utils import CargoHelper
+    cargo_info = mongo.db.cargo.find().sort("price", ASCENDING)
+
+    cargo_helper = CargoHelper(list(cargo_info), ordered=True)
+    result = cargo_helper.get_result()
+
+    return make_response(jsonify(result), 200)

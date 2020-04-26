@@ -1,8 +1,8 @@
 import os
 
 # Base
-FLASK_ENV = os.environ.get("FLASK_ENV", "development")
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+FLASK_ENV = os.environ.get("FLASK_ENV", "development")
 FIXTURE_DIR = os.path.join(BASE_DIR, "fixtures", "data")
 
 # Database

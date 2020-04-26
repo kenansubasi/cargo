@@ -6,7 +6,7 @@
 	},
 	"item": [
 		{
-			"name": "index",
+			"name": "Index",
 			"request": {
 				"method": "GET",
 				"header": [],
@@ -20,17 +20,35 @@
 			"response": []
 		},
 		{
-			"name": "City List",
+			"name": "Cargo Info",
 			"request": {
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{BASE_URL}}/cities/",
+					"raw": "{{BASE_URL}}/info/",
 					"host": [
 						"{{BASE_URL}}"
 					],
 					"path": [
-						"cities",
+						"info",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cargo Result",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/result/",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"result",
 						""
 					]
 				}
