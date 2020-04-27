@@ -7,6 +7,9 @@ from .constants import FLASK_ENV, FIXTURE_DIR
 
 
 def load_data():
+    """
+    It loads dummy data.
+    """
     if FLASK_ENV != "development":
         print("You must enable DEBUG mode to run this command.")
         return
@@ -29,6 +32,19 @@ def load_data():
 class CargoHelper(object):
 
     def __init__(self, cargo_info, ordered=False):
+        """
+        :param cargo_info: list
+        :param ordered: boolean
+
+        cargo_info structure: [
+            {
+                "city": "A",
+                "shipment_company": "X",
+                "price": 10
+            },
+            ...
+        ]
+        """
         self.cargo_info = cargo_info if ordered else sorted(cargo_info, key=lambda item: item["price"])
         self.cities = set()
         self.shipment_companies = set()
@@ -40,6 +56,9 @@ class CargoHelper(object):
         self.cargo_count = math.ceil(self.city_count / self.shipment_company_count)
 
     def get_result(self):
+        """
+        It returns optimum shipping list.
+        """
         result = {}
         used_shipment_companies = []
 

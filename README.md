@@ -1,6 +1,12 @@
 # Cargo App
 
 
+## Endpoints
+
+* Cargo Info: /info/
+* Cargo Result: /result/
+
+
 ## Installation
 
 We use docker to run the project.

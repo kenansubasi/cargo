@@ -13,6 +13,9 @@ mongo = PyMongo(app)
 
 @app.route('/')
 def index():
+    """
+    It returns all endpoints.
+    """
     data = {
         "Cargo Info": f"{request.url}info/",
         "Cargo Result": f"{request.url}result/"
@@ -23,6 +26,9 @@ def index():
 
 @app.route("/info/")
 def cargo_info():
+    """
+    It lists cargos' information.
+    """
     cargo_info = mongo.db.cargo.find()
 
     data = []
@@ -38,6 +44,9 @@ def cargo_info():
 
 @app.route("/result/")
 def cargo_result():
+    """
+    It returns optimum shipping list.
+    """
     from .utils import CargoHelper
     cargo_info = mongo.db.cargo.find().sort("price", ASCENDING)
 
